@@ -1,0 +1,50 @@
+.main-nav {
+  position: relative;
+
+}
+
+.main-nav--closed {
+  display: block;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-nav__item {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  background: @mobile-menu-bg;
+  border-bottom: 1px solid #678fa8;
+  cursor: pointer;
+}
+
+.main-nav__item:hover {
+  background: @mobile-menu-hover-bg;
+}
+
+.main-nav__item:active {
+  background: @mobile-menu-active-bg;
+}
+
+.main-nav__item:active .main-nav__link {
+  color: @mobile-menu-active-text;
+}
+
+.main-nav__link {
+  color: @mobile-menu-text;
+  text-decoration: none;
+}
+.main-nav__toggle {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 10px;
+  height: 15px;
+  font-size: 0;
+  cursor: pointer;
+}
