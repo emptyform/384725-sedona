@@ -37,7 +37,10 @@ module.exports = function(grunt) {
           ]
         },
         options: {
-          server: ".",
+          server: {
+            baseDir: ".",
+            index: "photo.html"
+          },
           watchTask: true,
           notify: false,
           open: true,
