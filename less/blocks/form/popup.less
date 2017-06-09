@@ -1,3 +1,49 @@
 .popup {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
   border: 2px solid green;
+}
+
+.popup--failure {
+
+}
+
+.popup--success {
+
+}
+
+.popup__title {
+
+}
+
+.popup__text {
+
+}
+
+.popup__btn {
+  width: 180px;
+}
+
+.popup--success .popup__btn {
+  width: 280px;
+}
+
+@media @tablet-widths {
+  .popup {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .popup--success {
+    width: 645px;
+  }
+
+  .popup__btn {
+    width: 270px;
+  }
+
+  .popup--success .popup__btn {
+    width: 445px;
+  }
 }

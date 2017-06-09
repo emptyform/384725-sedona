@@ -1,8 +1,8 @@
 .leave-review {
-  padding: 0 20px;
+  padding: 0 25px;
   padding-top: 40px;
   padding-bottom: 20px;
-  border-bottom: 2px solid green;
+  border: 2px solid green;
 }
 
 .leave-review__title {
@@ -11,4 +11,16 @@
 
 .leave-review__text {
   text-align: center;
+}
+
+@media @tablet-widths {
+  .leave-review__title {
+    padding: 0 100px;
+  }
+}
+
+@media @desktop-widths {
+  .leave-review__title {
+    padding: 0 350px;
+  }
 }
