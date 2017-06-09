@@ -1,4 +1,18 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
   padding-top: 40px;
   padding-bottom: 15px;
+  border: 2px solid blue;
+}
+
+@media @tablet-widths {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
 }
