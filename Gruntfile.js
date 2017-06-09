@@ -10,7 +10,8 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "css/style.css": "less/style.less"
+          "css/style.css": "less/style.less",
+          "css/outlines.css": "less/outlines.less"
         }
       }
     },
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
         options: {
           server: {
             baseDir: ".",
-            index: "photo.html"
+            index: "index.html"
           },
           watchTask: true,
           notify: false,

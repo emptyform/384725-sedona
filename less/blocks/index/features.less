@@ -1,5 +1,7 @@
 .features {
-  border-bottom: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
 }
 
 .features__item {
@@ -7,6 +9,7 @@
   padding-bottom: 40px;
   padding-top: 15px;
   padding-right: 30px;
+  border: 2px solid yellow;
 }
 
 .features__icon {
@@ -24,4 +27,47 @@
 
 .features__text {
   margin-left: 50px;
+}
+
+@media @tablet-widths {
+  .features {
+    flex-direction: row;
+  }
+
+  .features__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features__icon {
+    float: none;
+    margin: 0;
+  }
+
+  .features__text {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media @desktop-widths {
+  .features {
+    flex-direction: row;
+  }
+
+  .features__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features__icon {
+    float: none;
+    margin: 0;
+  }
+
+  .features__text {
+    margin: 0;
+    text-align: center;
+  }
 }
