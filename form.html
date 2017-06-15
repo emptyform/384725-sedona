@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/outlines.css">
   </head>
   <body>
   <div class="page-wrapper">
     <header class="page-header">
       <nav class="main-nav main-nav--closed">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="form.html">Форма отзыва</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
         </ul>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -24,7 +25,7 @@
     </header>
     <main>
       <div class="intro intro--small">
-        <img class="intro__img intro__img--small" src="img/text-sedona-index.svg" alt="Sedona">
+        <img class="intro__img intro__img--small" src="img/text-sedona.svg" alt="Sedona">
       </div>
 
       <div class="leave-review">
@@ -36,17 +37,17 @@
         <fieldset class="form-group">
           <legend class="form-group__title">Представьтесь:</legend>
           <ul class="form-group__list">
-            <li class="form-group__list-item"><label class="form-group__label" for="name">Имя: </label><input class="form-group__input" id="name" type="text" placeholder="Петр"></li>
-            <li class="form-group__list-item"><label class="form-group__label" for="surname">Фамилия: </label><input class="form-group__input" id="surname" type="text" placeholder="Иванов"></li>
+            <li class="form-group__list-item"><label class="form-group__label" for="name">Имя*: </label><input class="form-group__input" id="name" type="text" placeholder="Петр"></li>
+            <li class="form-group__list-item"><label class="form-group__label" for="surname">Фамилия*: </label><input class="form-group__input" id="surname" type="text" placeholder="Иванов"></li>
             <li class="form-group__list-item"><label class="form-group__label" for="second-name">Отчество: </label><input class="form-group__input" id="second-name" type="text" placeholder="Александрович"></li>
           </ul>
         </fieldset>
 
         <fieldset class="form-group">
-          <legend class="form-group__title form-group__title--gray-hr">Контактная информация:</legend>
+          <legend class="form-group__title form-group__title--grey-hr">Контактная информация:</legend>
           <ul class="form-group__list">
-            <li class="form-group__list-item"><label class="form-group__label" for="tel">Контактный телефон*: </label><input class="form-group__input" id="tel" type="tel" placeholder="Введите телефон" required></li>
-            <li class="form-group__list-item"><label class="form-group__label" for="email">Электронная почта*: </label><input class="form-group__input" id="email" type="email" placeholder="Введите e-mail" required></li>
+            <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="tel">Контактный телефон*: </label><input class="form-group__input" id="tel" type="tel" placeholder="Введите телефон" required></li>
+            <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="email">Электронная почта*: </label><input class="form-group__input" id="email" type="email" placeholder="Введите e-mail" required></li>
           </ul>
         </fieldset>
 
@@ -69,7 +70,7 @@
         </fieldset>
 
         <fieldset class="form-group">
-          <legend class="form-group__title">Посещенные достопримечательности:</legend>
+          <legend class="form-group__title form-group__title--grey-hr">Посещенные<br> достопримечательности:</legend>
           <ul class="form-group__list">
             <li class="form-group__list-item">
               <input class="form-group__input" id="sight-1" type="checkbox" checked>
@@ -91,29 +92,29 @@
         </fieldset>
 
         <fieldset class="form-group">
-          <legend class="form-group__title">Опишите свои эмоции:</legend>
+          <legend class="form-group__title form-group__title--grey-hr">Опишите свои эмоции:</legend>
           <textarea class="form-group__textarea" name="emotions" rows="7" cols="30" placeholder="Опишите подробно все свои восторги"></textarea>
           <input class="form-group__btn btn" type="submit" name="submit" value="Отправить отзыв">
-          <span class="form-group__required-fields">*-Обязательные поля</span>
+          <span class="form-group__required-fields">* – Обязательные поля</span>
         </fieldset>
       </form>
     </main>
 
     <footer class="page-footer">
       <section class="sedona-tags">
-        <span>#visitsedona</span>
+        <a class="sedona-tags__link" href="#">#visitsedona</a>
       </section>
 
       <section class="socials">
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="#"></a>
+            <a class="socials__link socials__link--fb" href="#">Facebook</a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--tw" href="#"></a>
+            <a class="socials__link socials__link--tw" href="#">Twitter</a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--youtube" href="#"></a>
+            <a class="socials__link socials__link--youtube" href="#">Youtube</a>
           </li>
         </ul>
       </section>
@@ -126,7 +127,7 @@
       </section>
     </footer>
 
-    <div class="popup popup--failure">
+    <div class="popup popup--failure popup--hide">
       <h2 class="popup__title">Что-то пошло не так!</h2>
       <p class="popup__text">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
@@ -134,7 +135,7 @@
       <button class="popup__btn btn" type="button">Ок</button>
     </div>
 
-    <div class="popup popup--success">
+    <div class="popup popup--success popup--hide">
       <h2 class="popup__title">Ваш отзыв отправлен!</h2>
       <p class="popup__text">
         Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
@@ -142,5 +143,6 @@
       <button class="popup__btn btn" type="button">Закрыть окно</button>
     </div>
   </div>
+  <script src="js/app.js"></script>
   </body>
 </html>
