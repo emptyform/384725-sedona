@@ -20,7 +20,7 @@ img {
 }
 
 h1 {
-  font-size: 21px;
+  font-size: 21px; /*!!!!*/
   font-weight: 700;
   line-height: 26px;
 }
@@ -28,4 +28,18 @@ h1 {
 h2 {
   font-size: 18px;
   line-height: 26px;
+}
+
+@media @tablet-widths {
+  body {
+    line-height: 21px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
 }
