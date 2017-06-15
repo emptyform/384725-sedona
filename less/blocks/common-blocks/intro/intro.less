@@ -1,6 +1,6 @@
 .intro {
   width: 100%;
-  border: 2px solid blue;
+  min-height: 390px;
   background: url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
               url("../img/bg-back-mobile@1x.jpg") no-repeat center;
   background-size: 100vw, cover;
@@ -11,5 +11,46 @@
   width: 280px;
   margin: 0 auto;
   padding-top: 90px;
-  padding-bottom: 85px;
+}
+
+.intro--small {
+  padding: 0 45px;
+  min-height: 160px;
+}
+
+.intro__img--small {
+  padding-top: 50px;
+}
+
+@media @tablet-widths {
+  .intro {
+    min-height: 520px;
+    background: url("../img/bg-intro-triangle-tablet.png") no-repeat bottom,
+                url("../img/bg-back-mobile@1x.jpg") no-repeat center;
+    background-size: 100vw, cover;
+  }
+
+  .intro--small {
+    padding: 0 45px;
+    min-height: 290px;
+  }
+
+  .intro__img {
+    width: 460px;
+    padding-top: 100px;
+  }
+}
+
+@media @desktop-widths {
+  .intro {
+    min-height: 520px;
+    background: url("../img/bg-intro-triangle-desktop.png") no-repeat bottom,
+    url("../img/bg-back-mobile@1x.jpg") no-repeat center;
+    background-size: 100vw, cover;
+  }
+
+  .intro--small {
+    padding: 0 45px;
+    min-height: 300px;
+  }
 }

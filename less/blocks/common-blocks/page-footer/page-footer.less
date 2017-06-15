@@ -1,9 +1,9 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  min-height: 243px;
+  padding-top: 32px;
   padding-bottom: 15px;
-  border: 2px solid blue;
 }
 
 @media @tablet-widths {
@@ -12,7 +12,13 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    min-height: 120px;
+    padding: 0;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer {
+    justify-content: flex-start;
   }
 }
