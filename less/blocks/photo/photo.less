@@ -1,18 +1,48 @@
 .photo {
+  position: relative;
   display: block;
-  margin: 0 auto;
-  border: 2px solid yellow;
+  padding: 22px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid @gallery-photo-border-bottom;
 }
 
 .photo__img {
+  display: block;
   width: 100%;
   height: 280px;
+  margin-bottom: 17px;
+}
+
+.photo__title {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.photo__author {
+  margin: 0;
+  padding: 0;
+  color: @gallery-photo-autor;
+  text-transform: none;
+}
+
+.photo__like-icon {
+  margin-right: 15px;
+}
+
+.photo__likes {
 }
 
 @media @tablet-widths {
   .photo {
-    flex-basis: 325px;
+    flex-basis: 324px;
     flex-grow: 1;
+    padding: 0;
+    border: none;
+    background-color: @gallery-photo-bg-tablet;
   }
 
   .photo--big {
@@ -20,11 +50,46 @@
     min-width: 100%;
   }
 
+  .photo--gray {
+    background-color: @gallery-photo-gray-bg-tablet;
+  }
+
+  .photo--big .photo__img {
+    height: 400px;
+  }
+
   .photo:last-child {
     margin-left: 0;
     margin-right: auto;
     flex-grow: 0;
     flex-basis: 50%;
+  }
+
+  .photo__img {
+    height: 267px;
+  }
+
+  .photo__author,
+  .photo__title {
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .photo__author {
+    padding-bottom: 20px;
+
+  }
+
+  .photo__like-icon {
+    position: absolute;
+    bottom: 32px;
+    right: 63px;
+  }
+
+  .photo__likes {
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
   }
 }
 
@@ -36,5 +101,43 @@
 
   .photo:last-child {
     flex-basis: 33%;
+  }
+
+  .photo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: @gallery-photo-element-desktop;
+  }
+
+  .photo__img {
+    margin-bottom: 0;
+  }
+
+  .photo__title {
+    position: absolute;
+    bottom: 42px;
+    z-index: 2;
+    font-size: 14px;
+    color: @gallery-photo-title-desktop;
+  }
+
+  .photo__author {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    color: @gallery-photo-author-desktop;
+  }
+
+  .photo__like-icon {
+    z-index: 2;
+  }
+
+  .photo__likes {
+    bottom: 30px;
+    z-index: 2;
+    color: @gallery-photo-likes-desktop;
   }
 }

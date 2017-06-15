@@ -1,7 +1,6 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  border: 2px solid green;
 }
 
 @media @tablet-widths {
@@ -10,5 +9,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 60px;
+    padding-top: 30px;
+    padding-bottom: 18px;
+  }
+}
+
+@media @desktop-widths {
+  .gallery {
+    padding: 0;
+    padding-bottom: 18px;
   }
 }
