@@ -1,19 +1,162 @@
 .player {
-  border: 2px solid plum;
+  position: relative;
+  min-height: 270px;
+  margin-bottom: 42px;
 }
 
 .player__video {
+  display: block;
   width: 100%;
+  height: auto; /*auto*/
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 280px;
+  min-height: 110px;
+}
+
+.player__volume-block {
+  position: relative;
+  z-index: 10;
+  height: 45px;
+  padding-top: 1px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.player__volume-scale {
+  width: 235px;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 21px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.player__volume-slider {
+  width: 10px;
+  height: 10px;
+  margin-top: -6px;
+  margin-left: 70px;
+  border-radius: 50%;
+  background: @player-volume-slider-color;
+}
+
+.player__buttons {
+  position: relative;
+  height: 68px;
+  background: @player-buttons-bg;
+}
+
+.player__btn {
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.player__btn--replay {
+  left: 25px;
+  background: url("../img/icon-video-replay.svg") no-repeat center;
+}
+
+.player__btn--sub {
+  width: 32px;
+  right: 75px;
+  background: url("../img/icon-video-subtitles.svg") no-repeat center;
+}
+
+.player__btn--full {
+  right: 25px;
+  background: url("../img/icon-video-fullscreen.svg") no-repeat center;
 }
 
 @media @tablet-widths {
   .player {
     padding: 0 60px;
   }
+
+  .player__video { /*delete*/
+    height: 500px;
+  }
+
+  .player__controls {
+    left: 60px;
+    width: 648px;
+    min-height: 94px;
+  }
+
+  .player__volume-block {
+    position: absolute;
+    width: 648px;
+    height: 94px;
+  }
+
+  .player__volume-scale {
+    position: absolute;
+    top: 45px;
+    left: 90px;
+    width: 400px;
+    margin-top: 0;
+  }
+
+  .player__volume-slider {
+    position: absolute;
+    top: 42px;
+    left: 150px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .player__buttons {
+    position: absolute;
+    width: 648px;
+    height: 0;
+  }
+
+  .player__btn {
+    top: 40px;
+  }
+
+  .player__btn--sub {
+    right: 95px;
+  }
+
+  .player__btn--full {
+    right: 40px;
+  }
 }
 
 @media @desktop-widths {
   .player {
     padding: 0 200px;
+    margin-bottom: 85px;
+  }
+
+  .player__volume-block {
+    width: 800px;
+  }
+
+  .player__volume-scale {
+    width: 540px;
+  }
+
+  .player__controls {
+    left: 200px;
+    width: 800px;
+  }
+
+  .player__volume-block {
+    width: 800px;
+  }
+
+  .player__buttons {
+    width: 800px;
   }
 }

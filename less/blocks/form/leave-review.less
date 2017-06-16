@@ -1,26 +1,40 @@
 .leave-review {
-  padding: 0 25px;
-  padding-top: 40px;
-  padding-bottom: 20px;
-  border: 2px solid green;
+  min-height: 202px;
+  padding: 0 20px;
+  padding-top: 36px;
+  border-bottom: 1px solid @leave-review-border-bottom;
 }
 
 .leave-review__title {
+  margin: 0;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 .leave-review__text {
+  margin: 0;
+  line-height: 24px;
   text-align: center;
 }
 
 @media @tablet-widths {
+  .leave-review {
+    min-height: 230px;
+    padding: 0 160px;
+    padding-top: 72px;
+    border-bottom: none;
+  }
+
   .leave-review__title {
-    padding: 0 100px;
+    margin-bottom: 30px;
+    font-size: 30px;
   }
 }
 
 @media @desktop-widths {
-  .leave-review__title {
-    padding: 0 350px;
+  .leave-review {
+    min-height: 255px;
+    padding: 0 380px;
+    padding-top: 110px;
   }
 }
