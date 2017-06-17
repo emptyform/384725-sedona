@@ -1,0 +1,17 @@
+body {
+  /*background: @bg-color url("../../img/sedona-photo-mobile.png")  50% 0;*/
+  background-size: 320px auto;
+  min-height: 750px;
+}
+@media (min-width: 768px) {
+  body {
+    /*background: @bg-color url("../../img/sedona-photo-tablet.png")  50% 0;*/
+    background-size: 768px auto;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    /*background: @bg-color url("../../img/sedona-photo-desktop.png")  50% 0;*/
+    background-size: 1280px auto;
+  }
+}
