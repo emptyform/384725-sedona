@@ -19,8 +19,13 @@
         </ul>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
+
       <div class="index-logo">
-        <img class="index-logo__img" src="img/logo-sedona-mobile.svg" alt="City of Sedona">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="index-logo__img" src="img/logo-sedona-mobile.svg" alt="City of Sedona">
+        </picture>
       </div>
     </header>
     <main>
