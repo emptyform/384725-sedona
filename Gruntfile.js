@@ -7,8 +7,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "build/css/style.css": "less/style.less",
-          "css/outlines.css": "less/outlines.less" /*Remove*/
+          "build/css/style.css": "less/style.less"
         }
       }
     },
@@ -104,7 +103,7 @@ module.exports = function(grunt) {
         options: {
           server: {
             baseDir: "build/",
-            index: "index.html"
+            index: "photo.html"
           },
           watchTask: true,
           notify: false,
