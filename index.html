@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sedona</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/outlines.css">
+    <title>Sedona - Главная</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
   <div class="page-wrapper">
@@ -31,7 +35,7 @@
 
     <main>
       <div class="intro">
-        <img class="intro__img" src="img/text-sedona-index.svg" alt="Sedona">
+        <img class="intro__img" src="img/text-sedona-index.svg" alt="Sedona" width="280" height="220">
       </div>
 
       <section class="intro-descr">
@@ -54,17 +58,17 @@
 
       <section class="features">
         <div class="features__item">
-          <img class="features__icon" src="img/icon-house.svg" alt="house">
+          <img class="features__icon" src="img/icon-house.svg" alt="house" width="80" height="70">
           <h2 class="features__title">Жилье</h2>
           <p class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
         <div class="features__item">
-          <img class="features__icon" src="img/icon-gift.svg" alt="present">
+          <img class="features__icon" src="img/icon-gift.svg" alt="present" width="80" height="70">
           <h2 class="features__title">Сувениры</h2>
           <p class="features__text">Не только китайского,<br> но и местного производства</p>
         </div>
         <div class="features__item">
-          <img class="features__icon" src="img/icon-burger.svg" alt="burger">
+          <img class="features__icon" src="img/icon-burger.svg" alt="burger" width="80" height="70">
           <h2 class="features__title">Еда</h2>
           <p class="features__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
@@ -110,12 +114,9 @@
       </section>
 
       <div class="map">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-          <img class="map__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="map">
-        </picture>
-        <div class="map__map-marker"></div>
+        <div class="map__canvas" id="map-canvas">
+          <div class="map__map-marker"></div>
+        </div>
       </div>
     </main>
 
