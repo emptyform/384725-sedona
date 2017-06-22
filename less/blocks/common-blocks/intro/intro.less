@@ -1,9 +1,11 @@
 .intro {
   width: 100%;
   min-height: 390px;
-  background: url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
-              url("../img/bg-back-mobile@1x.jpg") no-repeat center;
-  background-size: 100vw, cover;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"),
+                    url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 105%, 768px auto;
+  background-position: 50% 100%, center bottom;
 }
 
 @media (min-resolution: 144dpi),
@@ -33,9 +35,9 @@
 @media @tablet-widths {
   .intro {
     min-height: 520px;
-    background: url("../img/bg-intro-triangle-tablet.png") no-repeat bottom,
-                url("../img/bg-back-tablet@1x.jpg") no-repeat center;
-    background-size: 100vw, cover;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"),
+                      url("../img/bg-back-tablet@1x.jpg");
+    background-size: 102%, 768px auto;
   }
 
   .intro--small {
@@ -60,9 +62,9 @@
 @media @desktop-widths {
   .intro {
     min-height: 520px;
-    background: url("../img/bg-intro-triangle-desktop.png") no-repeat bottom,
-                url("../img/bg-back-desktop@1x.jpg") no-repeat center;
-    background-size: 100vw, cover;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"),
+                      url("../img/bg-back-desktop@1x.jpg");
+    background-size: 102%, 1200px auto;
   }
 
   .intro--small {
