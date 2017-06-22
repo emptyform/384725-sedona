@@ -1,25 +1,56 @@
 .map {
-  position: relative;
   min-height: 350px;
 }
 
-.map__img {
-  width: 100%;
-  height: auto;
+.map__canvas {
+  height: 350px;
+  line-height: 350px;
+  text-align: center;
+  background-color: @map-color-br;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .map__canvas {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
 }
 
 .map__map-marker {
-  position: absolute;
-  top: 160px;
-  left: 140px;
+  display: inline-block;
   width: 30px;
   height: 30px;
+  margin: 0 auto;
   background: url("../img/map-marker.png") no-repeat center;
+  z-index: 10;
 }
 
 @media @tablet-widths {
-  .map__img {
-    width: 100%;
-    height: 342px;
+  .map__canvas {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+(min-width: 768px) and (min-resolution: 1.5dppx) {
+  .map__canvas {
+    background-image: url("../img/bg-map-tablet@2x.jpg");
+  }
+}
+
+@media @desktop-widths {
+  .map__canvas {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
+}
+
+@media (min-width: 1200px) and (min-resolution: 144dpi),
+(min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .map__canvas {
+    background-image: url("../img/bg-map-desktop@2x.jpg");
   }
 }
