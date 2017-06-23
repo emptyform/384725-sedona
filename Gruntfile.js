@@ -7,8 +7,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "build/css/style.css": "less/style.less",
-          "css/outlines.css": "less/outlines.less" /*Remove*/
+          "build/css/style.css": "less/style.less"
         }
       }
     },
@@ -19,9 +18,7 @@ module.exports = function(grunt) {
             require("autoprefixer")({browsers: [
               "last 2 versions"
             ]}),
-            require("css-mqpacker")({
-              sort: true
-            })
+            require("css-mqpacker")()
           ]
         },
         src: "build/css/*.css"

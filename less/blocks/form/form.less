@@ -44,15 +44,14 @@
 }
 
 .form-group__label--margin {
-  margin-bottom: 10px;
+  margin-bottom: 0;
   margin-left: 20px;
 }
 
 
 .form-group__list-item input[type="text"] {
   width: 150px;
-  height: 58px;
-  padding: 20px;
+  padding: 17px;
   flex-grow: 1;
   font-weight: 700;
   font-size: 18px;
@@ -66,8 +65,7 @@
 .form-group__list-item input[type="email"] {
   position: relative;
   width: 280px;
-  height: 58px;
-  padding: 20px;
+  padding: 17px;
   padding-right: 65px;
   flex-grow: 1;
   font-weight: 700;
@@ -87,13 +85,33 @@
 }
 
 .form-group input:focus {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 16px;
   background-color: @input-focus-bg;
   border: 4px solid @input-focus-border;
   outline: none;
 }
 
-.form-group:nth-child(3) .form-group__label,
-.form-group:nth-child(4) .form-group__label {
+.form-group__list-item input[type="tel"]:focus,
+.form-group__list-item input[type="email"]:focus {
+  border-right: none;
+}
+
+.form-group--contacts {
+  padding-bottom: 10px;
+}
+
+.form-group--radio {
+  padding-bottom: 20px;
+}
+
+.form-group--radio .form-group__list-item {
+  margin: 5px 0;
+}
+
+.form-group--radio .form-group__label,
+.form-group--checkbox .form-group__label {
   position: relative;
   font-size: 18px;
   font-weight: 700;
@@ -103,8 +121,8 @@
   margin-right: 0;
 }
 
-.form-group:nth-child(3) .form-group__label::before,
-.form-group:nth-child(4) .form-group__label::before {
+.form-group--radio .form-group__label::before,
+.form-group--checkbox .form-group__label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -117,21 +135,21 @@
   color: @form-group-label-element;
 }
 
-.form-group:nth-child(4) .form-group__label::before {
+.form-group--checkbox .form-group__label::before {
   border-radius: 5px;
 }
 
-.form-group:nth-child(3) .form-group__label:hover::before,
-.form-group:nth-child(4) .form-group__label:hover::before {
+.form-group--radio .form-group__label:hover::before,
+.form-group--checkbox .form-group__label:hover::before {
   background-color: @form-group-label-element-bg-hover;
 }
 
-.form-group:nth-child(3) .form-group__label:active::before,
-.form-group:nth-child(4) .form-group__label:active::before {
+.form-group--radio .form-group__label:active::before,
+.form-group--checkbox .form-group__label:active::before {
   background-color: @form-group-label-element-bg-active;
 }
 
-.form-group:nth-child(3) input[type="radio"]:checked + label::after {
+.form-group--radio input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
   top: 17px;
@@ -142,7 +160,7 @@
   border-radius: 50%;
 }
 
-.form-group:nth-child(4) input[type="checkbox"]:checked + label::after {
+.form-group--checkbox input[type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
   top: 12px;
@@ -156,8 +174,8 @@
   border-top: none;
 }
 
-.form-group:nth-child(3) input[type="radio"]:checked + label:active::after,
-.form-group:nth-child(4) input[type="checkbox"]:checked + label:active::after {
+.form-group--radio input[type="radio"]:checked + label:active::after,
+.form-group--checkbox input[type="checkbox"]:checked + label:active::after {
   opacity: 0.3;
 }
 
@@ -216,29 +234,30 @@
     border: none;
   }
 
-  .form-group:first-child {
+  .form-group--fio {
     padding-left: 60px;
     padding-right: 0;
     margin-bottom: 45px;
     border-left: 1px solid @form-group-title-element-tablet;
   }
 
-  .form-group:nth-child(2) {
+  .form-group--contacts {
     margin-bottom: 33px;
+    padding-bottom: 0;
   }
 
-  .form-group:nth-child(3) {
+  .form-group--radio {
     order: -1;
     margin-bottom: 45px;
   }
 
-  .form-group:nth-child(4) {
+  .form-group--checkbox {
     margin-bottom: 41px;
   }
 
-  .form-group:nth-child(2),
-  .form-group:nth-child(4),
-  .form-group:nth-child(5) {
+  .form-group--contacts,
+  .form-group--checkbox,
+  .form-group--textarea {
     flex-basis: 650px;
     border-top: 1px solid @form-group-title-element-tablet;
   }
@@ -251,29 +270,29 @@
     line-height: 26px;
   }
 
-  .form-group:nth-child(2) .form-group__title,
-  .form-group:nth-child(4) .form-group__title,
-  .form-group:nth-child(5) .form-group__title {
+  .form-group--contacts .form-group__title,
+  .form-group--checkbox .form-group__title,
+  .form-group--textarea .form-group__title {
     padding-top: 0;
     padding-left: 60px;
     padding-right: 60px;
   }
 
-  .form-group:nth-child(2) .form-group__title {
+  .form-group--contacts .form-group__title {
     margin-bottom: 5px;
   }
 
-  .form-group:nth-child(4) .form-group__title {
+  .form-group--checkbox .form-group__title {
     margin-bottom: 22px;
   }
 
-  .form-group:nth-child(5) .form-group__title {
+  .form-group--textarea .form-group__title {
     margin-bottom: 40px;
     padding-left: 70px;
     padding-right: 70px;
   }
 
-  .form-group:nth-child(4) {
+  .form-group--checkbox {
     .form-group__list {
       display: flex;
       justify-content: center;
@@ -281,20 +300,20 @@
     }
   }
 
-  .form-group:nth-child(4) {
+  .form-group--checkbox {
     .form-group__list-item:nth-child(2) {
       order: 3;
       margin-top: 12px;
     }
   }
 
-  .form-group:nth-child(4) {
+  .form-group--checkbox {
     .form-group__list-item:nth-child(3) {
       order: 2;
     }
   }
 
-  .form-group:nth-child(4) {
+  .form-group--checkbox {
     .form-group__list-item:nth-child(4) {
       order: 4;
       margin-top: 12px;
@@ -303,6 +322,10 @@
 
   .form-group__list-item {
     flex-basis: 230px;
+  }
+
+  .form-group__label--margin {
+    margin-bottom: 10px;
   }
 
   .form-group__list-item input[type="tel"],
@@ -341,45 +364,43 @@
     border-bottom: none;
   }
 
-  .form-group:nth-child(1) {
+  .form-group--fio {
     padding-left: 0;
     margin-bottom: 40px;
     border-left: none;
   }
 
-  .form-group:nth-child(2),
-  .form-group:nth-child(4),
-  .form-group:nth-child(5) {
+  .form-group--contacts,
+  .form-group--checkbox,
+  .form-group--textarea {
     flex-basis: 960px;
     max-width: 960px;
   }
 
-  .form-group:nth-child(3) {
+  .form-group--radio {
     flex-basis: 480px;
     margin-bottom: 40px;
     border-right: 1px solid @form-group-title-element-tablet;
   }
 
-
-  .form-group:nth-child(5) {
+  .form-group--textarea {
     padding-bottom: 65px;
   }
-
 
   .form-group__list-item {
     flex-basis: 230px;
   }
 
-  .form-group:nth-child(3) .form-group__title {
+  .form-group--radio .form-group__title {
     text-align: center;
   }
 
-  .form-group:nth-child(2) .form-group__title {
+  .form-group--contacts .form-group__title {
     margin-bottom: 50px;
     padding-top: 0;
   }
 
-  .form-group:nth-child(2) .form-group__list {
+  .form-group--contacts .form-group__list {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -387,46 +408,38 @@
     text-align: left;
   }
 
-  .form-group:nth-child(4) .form-group__list {
+  .form-group--checkbox .form-group__list {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
   }
 
-  .form-group:nth-child(2) .form-group__list-item {
+  .form-group--contacts .form-group__list-item {
     flex-wrap: nowrap;
-    max-width: 400px;
-    flex-grow: 1;
+    min-width: 400px;
   }
 
-  .form-group:nth-child(2) .form-group__list-item:last-child {
-    max-width: 480px;
+  .form-group--contacts .form-group__list-item:last-child {
+    min-width: 480px;
   }
 
-  .form-group:nth-child(2) .form-group__label {
+  .form-group--contacts .form-group__label {
     margin: 0;
     margin-right: 20px;
   }
 
-  .form-group:nth-child(4) .form-group__list-item {
+  .form-group--checkbox .form-group__list-item {
     flex-basis: 210px;
   }
 
-  .form-group:nth-child(4) {
+  .form-group--checkbox {
     .form-group__list-item:nth-child(2) {
       order: 3;
       margin-top: 0;
-      margin-left: 25px;
     }
   }
 
-  .form-group:nth-child(4) {
-    .form-group__list-item:nth-child(3) {
-      margin-left: 25px;
-    }
-  }
-
-  .form-group:nth-child(4) {
+  .form-group--checkbox {
     .form-group__list-item:nth-child(4) {
       order: 4;
       margin-top: 0;
@@ -435,7 +448,7 @@
 
   .form-group__list-item input[type="tel"],
   .form-group__list-item input[type="email"] {
-    width: 310px;
+    max-width: 310px;
   }
 
   .form-group__btn {

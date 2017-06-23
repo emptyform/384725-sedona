@@ -1,8 +1,20 @@
 .popup {
-  width: 100%;
+  position: absolute;
+  top: 1325px;
   padding: 40px 20px;
   text-align: center;
-  border: 2px solid green;
+  background: @bg-color;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup--success {
+  top: 1625px;
+  padding: 40px 0;
+  padding-bottom: 0;
+}
+
+.popup--success .popup__text {
+  padding: 20px 45px;
 }
 
 .popup--hide {
@@ -11,6 +23,15 @@
 
 .popup--show {
   display: block;
+}
+
+.popup__text {
+  padding: 0 25px;
+}
+
+.popup__btn-area {
+  background: @input-type-text-bg;
+  padding: 20px;
 }
 
 .popup__btn {
@@ -23,12 +44,25 @@
 
 @media @tablet-widths {
   .popup {
+    top: 1425px;
+    left: 50%;
     width: 400px;
-    margin: 0 auto;
+    margin-left: -200px;
   }
 
   .popup--success {
-    width: 645px;
+    top: 1270px;
+    width: 650px;
+    margin-left: -325px;
+
+  }
+
+  .popup__text {
+    padding: 20px 25px;
+  }
+
+  .popup__btn-area {
+    padding: 40px 20px;
   }
 
   .popup__btn {

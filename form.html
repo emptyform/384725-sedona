@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/outlines.css">
+    <title>Sedona - Оставте свой отзыв</title>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
   <div class="page-wrapper">
@@ -30,7 +29,7 @@
     </header>
     <main>
       <div class="intro intro--small">
-        <img class="intro__img intro__img--small" src="img/text-sedona.svg" alt="Sedona">
+        <img class="intro__img intro__img--small" src="img/text-sedona.svg" alt="Sedona" width="460" height="80">
       </div>
 
       <div class="leave-review">
@@ -39,7 +38,7 @@
       </div>
 
       <form class="form" action="#" method="post">
-        <fieldset class="form-group">
+        <fieldset class="form-group form-group--fio">
           <legend class="form-group__title">Представьтесь:</legend>
           <ul class="form-group__list">
             <li class="form-group__list-item"><label class="form-group__label" for="name">Имя*: </label><input class="form-group__input" id="name" type="text" placeholder="Петр"></li>
@@ -48,15 +47,15 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form-group">
-          <legend class="form-group__title form-group__title--grey-hr">Контактная информация:</legend>
+        <fieldset class="form-group form-group--contacts">
+          <legend align="center" class="form-group__title form-group__title--grey-hr">Контактная информация:</legend>
           <ul class="form-group__list">
             <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="tel">Контактный телефон*: </label><input class="form-group__input" id="tel" type="tel" placeholder="Введите телефон" required></li>
             <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="email">Электронная почта*: </label><input class="form-group__input" id="email" type="email" placeholder="Введите e-mail" required></li>
           </ul>
         </fieldset>
 
-        <fieldset class="form-group">
+        <fieldset class="form-group form-group--radio">
           <legend class="form-group__title">Ваше Общее впечатление:</legend>
           <ul class="form-group__list">
             <li class="form-group__list-item">
@@ -74,8 +73,8 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form-group">
-          <legend class="form-group__title form-group__title--grey-hr">Посещенные<br> достопримечательности:</legend>
+        <fieldset class="form-group form-group--checkbox">
+          <legend align="center" class="form-group__title form-group__title--grey-hr">Посещенные<br> достопримечательности:</legend>
           <ul class="form-group__list">
             <li class="form-group__list-item">
               <input class="form-group__input" id="sight-1" type="checkbox" checked>
@@ -96,8 +95,8 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form-group">
-          <legend class="form-group__title form-group__title--grey-hr">Опишите свои эмоции:</legend>
+        <fieldset class="form-group form-group--textarea">
+          <legend align="center" class="form-group__title form-group__title--grey-hr">Опишите свои эмоции:</legend>
           <textarea class="form-group__textarea" name="emotions" rows="7" cols="30" placeholder="Опишите подробно все свои восторги"></textarea>
           <input class="form-group__btn btn" type="submit" name="submit" value="Отправить отзыв">
           <span class="form-group__required-fields">* – Обязательные поля</span>
@@ -143,9 +142,11 @@
     <div class="popup popup--success popup--hide">
       <h2 class="popup__title">Ваш отзыв отправлен!</h2>
       <p class="popup__text">
-        Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.
       </p>
-      <button class="popup__btn btn" type="button">Закрыть окно</button>
+      <div class="popup__btn-area">
+        <button class="popup__btn btn" type="button">Закрыть окно</button>
+      </div>
     </div>
   </div>
   <script src="js/app.js"></script>
