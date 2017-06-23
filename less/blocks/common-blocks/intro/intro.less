@@ -1,9 +1,11 @@
 .intro {
-  width: 100%;
-  min-height: 390px;
-  background: url("../img/bg-intro-triangle-mobile.svg") no-repeat bottom,
-              @bg-color-blue url("../img/bg-back-mobile@1x.jpg") no-repeat center;
-  background-size: 100vw, cover;
+  min-height: 389px;
+  background-color: @bg-color-blue;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"),
+                    url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 105%, 768px;
 }
 
 @media (min-resolution: 144dpi),
@@ -32,10 +34,12 @@
 
 @media @tablet-widths {
   .intro {
-    min-height: 520px;
-    background: url("../img/bg-intro-triangle-tablet.svg") no-repeat bottom,
-                @bg-color-blue url("../img/bg-back-tablet@1x.jpg") no-repeat center;
-    background-size: 100vw, cover;
+    min-height: 518px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"),
+                      url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 102%;
   }
 
   .intro--small {
@@ -50,7 +54,7 @@
 }
 
 @media (min-width: 768px) and (min-resolution: 144dpi),
-(min-width: 768px) and (min-resolution: 1.5dppx) {
+       (min-width: 768px) and (min-resolution: 1.5dppx) {
   .intro {
     background-image: url("../img/bg-intro-triangle-tablet.svg"),
                       url("../img/bg-back-tablet@2x.jpg");
@@ -60,9 +64,11 @@
 @media @desktop-widths {
   .intro {
     min-height: 520px;
-    background: url("../img/bg-intro-triangle-desktop.svg") no-repeat bottom,
-                @bg-color-blue url("../img/bg-back-desktop@1x.jpg") no-repeat center;
-    background-size: 100vw, cover;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"),
+                      url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 102%;
   }
 
   .intro--small {
@@ -71,8 +77,8 @@
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 144dpi),
-(min-width: 768px) and (min-resolution: 1.5dppx) {
+@media (min-width: 1200px) and (min-resolution: 144dpi),
+       (min-width: 1200px) and (min-resolution: 1.5dppx) {
   .intro {
     background-image: url("../img/bg-intro-triangle-desktop.svg"),
                       url("../img/bg-back-desktop@2x.jpg");
