@@ -18,9 +18,7 @@ module.exports = function(grunt) {
             require("autoprefixer")({browsers: [
               "last 2 versions"
             ]}),
-            require("css-mqpacker")({
-              sort: true
-            })
+            require("css-mqpacker")()
           ]
         },
         src: "build/css/*.css"
@@ -103,7 +101,7 @@ module.exports = function(grunt) {
         options: {
           server: {
             baseDir: "build/",
-            index: "photo.html"
+            index: "index.html"
           },
           watchTask: true,
           notify: false,
