@@ -33,9 +33,6 @@
   margin-right: 15px;
 }
 
-.photo__likes {
-}
-
 @media @tablet-widths {
   .photo {
     flex-basis: 324px;
@@ -77,19 +74,30 @@
 
   .photo__author {
     padding-bottom: 20px;
-
   }
 
   .photo__like-icon {
     position: absolute;
-    bottom: 32px;
-    right: 63px;
+    bottom: 35px;
+    right: 50px;
   }
 
   .photo__likes {
     position: absolute;
+    bottom: 32px;
+    right: 30px;
+  }
+
+  .photo--big .photo__like-icon {
+    position: absolute;
+    bottom: 32px;
+    right: 50px;
+  }
+
+  .photo--big .photo__likes {
+    position: absolute;
     bottom: 30px;
-    right: 35px;
+    right: 20px;
   }
 }
 
