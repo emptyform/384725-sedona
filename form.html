@@ -20,11 +20,13 @@
       </nav>
 
       <div class="index-logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img class="index-logo__img" src="img/logo-sedona-mobile.svg" alt="City of Sedona">
-        </picture>
+        <a href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="index-logo__img" src="img/logo-sedona-mobile.svg" alt="City of Sedona">
+          </picture>
+        </a>
       </div>
     </header>
     <main>
@@ -50,8 +52,8 @@
         <fieldset class="form-group form-group--contacts">
           <h2 class="form-group__title form-group__title--grey-hr">Контактная информация:</h2>
           <ul class="form-group__list">
-            <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="tel">Контактный телефон*: </label><input class="form-group__input" id="tel" type="tel" placeholder="Введите телефон" required></li>
-            <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="email">Электронная почта*: </label><input class="form-group__input" id="email" type="email" placeholder="Введите e-mail" required></li>
+            <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="tel"><span class="form-group__lable-part">Контактный </span>телефон*:</label><input class="form-group__input" id="tel" type="tel" placeholder="Введите телефон" required></li>
+            <li class="form-group__list-item"><label class="form-group__label form-group__label--margin" for="email">Электронная почта*:</label><input class="form-group__input" id="email" type="email" placeholder="Введите e-mail" required></li>
           </ul>
         </fieldset>
 
@@ -80,16 +82,16 @@
               <input class="form-group__input" id="sight-1" type="checkbox" checked>
               <label class="form-group__label" for="sight-1">Мост Дьявола </label>
             </li>
-            <li class="form-group__list-item">
+            <li class="form-group__list-item form-group__list-item--slide">
               <input class="form-group__input" id="sight-2" type="checkbox" checked>
               <label class="form-group__label" for="sight-2">Слайд-парк </label>
             </li>
-            <li class="form-group__list-item">
-              <input class="form-group__input" id="sight-3" type="checkbox">
+            <li class="form-group__list-item form-group__list-item--rock">
+              <input class="form-group__input" id="sight-3" type="checkbox" checked>
               <label class="form-group__label" for="sight-3">Гора-Колокол </label>
             </li>
-            <li class="form-group__list-item">
-              <input class="form-group__input" id="sight-4" type="checkbox" checked>
+            <li class="form-group__list-item form-group__list-item--rock">
+              <input class="form-group__input" id="sight-4" type="checkbox">
               <label class="form-group__label" for="sight-4">Красные скалы </label>
             </li>
           </ul>
@@ -98,7 +100,7 @@
         <fieldset class="form-group form-group--textarea">
           <h2 class="form-group__title form-group__title--grey-hr">Опишите свои эмоции:</h2>
           <textarea class="form-group__textarea" name="emotions" rows="7" cols="30" placeholder="Опишите подробно все свои восторги"></textarea>
-          <input class="form-group__btn btn" type="submit" name="submit" value="Отправить отзыв">
+          <button class="form-group__btn btn" type="submit" name="submit">Отправить отзыв</button>
           <span class="form-group__required-fields">* – Обязательные поля</span>
         </fieldset>
       </form>
@@ -112,10 +114,10 @@
       <section class="socials">
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="#">Facebook</a>
+            <a class="socials__link socials__link--tw" href="#">Twitter</a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--tw" href="#">Twitter</a>
+            <a class="socials__link socials__link--fb" href="#">Facebook</a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--youtube" href="#">Youtube</a>
