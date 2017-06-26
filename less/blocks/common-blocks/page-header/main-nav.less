@@ -109,12 +109,22 @@
     background: none;
   }
 
+  .main-nav__item:first-child {
+    margin-left: 49px;
+    margin-right: 76px;
+  }
+
   .main-nav__item:nth-child(2) {
-    margin-right: 5%;
+    margin-right: auto;
   }
 
   .main-nav__item:nth-child(3) {
-    margin-left: 10%;
+    margin-left: auto;
+  }
+
+  .main-nav__item:last-child {
+    margin-left: 50px;
+    margin-right: 27px;
   }
 
   .main-nav__link {
@@ -140,5 +150,25 @@
 
   .main-nav__link--active:active {
     color: @main-nav-active-link-active-tablet;
+  }
+}
+
+@media @desktop-widths {
+  .main-nav__item:first-child {
+    margin-left: 90px;
+    margin-right: 163px;
+  }
+
+  .main-nav__item:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .main-nav__item:nth-child(3) {
+    margin-left: auto;
+  }
+
+  .main-nav__item:last-child {
+    margin-left: 137px;
+    margin-right: 71px;
   }
 }
