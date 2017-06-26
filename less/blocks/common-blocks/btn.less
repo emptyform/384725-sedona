@@ -12,9 +12,35 @@
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: @btn-hover-bg;
+  }
+
+  &:active {
+    color: @btn-active-text;
+    background-color: @btn-active-bg;
+  }
+
+  &:disabled {
+    background-color: @btn-disabled-bg;
+  }
+
+  &--disabled {
+    background-color: @btn-disabled-bg;
+  }
+
+  &--disabled:hover {
+    background-color: @btn-disabled-bg;
+  }
+
+  &--disabled:active {
+    color: #ffffff;
+    background-color: @btn-disabled-bg;
+  }
 }
 
-.btn:hover {
+/*.btn:hover {
   background-color: @btn-hover-bg;
 }
 
@@ -25,4 +51,4 @@
 
 .btn:disabled {
   background-color: @btn-disabled-bg;
-}
+}*/
