@@ -101,7 +101,7 @@ module.exports = function(grunt) {
         options: {
           server: {
             baseDir: "build/",
-            index: "index.html"
+            index: "form.html"
           },
           watchTask: true,
           notify: false,
